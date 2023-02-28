@@ -1,0 +1,27 @@
+<div class="container-fluid">
+     <h2>Date Picker</h2>
+    <mat-form-field appearance="fill">
+        <mat-label>Enter a date range</mat-label>
+        <mat-date-range-input [rangePicker]="picker">
+          <input matStartDate placeholder="Start date">
+          <input matEndDate placeholder="End date">
+        </mat-date-range-input>
+        <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-date-range-picker #picker></mat-date-range-picker>
+      </mat-form-field> 
+      <h2>Without Lazy Loading</h2>
+      <div class="overflow-auto" style="height: 300px; border: 1px solid black; padding: 5px; width: 250px;">
+        <div *ngFor="let item of Products">
+            <img [src]="item.image" width="150" height="150">
+        </div>
+        
+      </div>
+      <h2>With Lazy Loading</h2>
+      <cdk-virtual-scroll-viewport itemSize="100" class="overflow-auto"
+      style="height: 300px; border: 1px solid black; padding: 5px; width: 250px;">
+      <div *cdkVirtualFor="let item of Products">
+        <img [src]="item.image" width="150" height="150">
+      </div>
+    </cdk-virtual-scroll-viewport>
+</div>

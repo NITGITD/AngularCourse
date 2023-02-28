@@ -1,0 +1,35 @@
+<div class="container">
+    <h3>Select Styles</h3>
+    <dl>
+        <dt>Backdround</dt>
+        <dd>
+            <select [(ngModel)]="bgStyle">
+                <option value="red">Red</option>
+                <option value="green">Green</option>
+                <option value="blue">Blue</option>
+                <option value="yellow">Yellow</option>
+            </select>
+        </dd>
+        <dd>Text Color</dd>
+        <dd>
+            <select [(ngModel)]="textStyle">
+                <option value="red">Red</option>
+                <option value="black">Black</option>
+                <option value="white">White</option>
+                <option value="yellow">Yellow</option>
+            </select>
+        </dd>
+        <dt>Padding</dt>
+        <dd>
+            1px <input [(ngModel)]="padding" type="range" min="1" value="1" max="50"> 50px
+        </dd>
+        <dt>Font Size</dt>
+        <dd>
+            10px<input (change)="FontChange()" [(ngModel)]="fontSize" type="range" min="10" max="100" value="10">
+        </dd>
+        <dd><button (click)="ApplyClick()" class="btn btn-primary">Apply</button></dd>
+    </dl>
+    <div class="container-fluid d-flex justify-content-center align-items-center" style="height:400px">
+    <h1 [ngStyle]="styleObject">Welcome to Angular</h1>
+</div>
+</div>

@@ -1,0 +1,15 @@
+<div class="container-fluid">
+    <h2>Bootstrap Input</h2>
+    <div class="w-25">
+        <label class="form-label">User Name</label>
+        <div>
+            <input type="text" class="form-control" placeholder="Enter Name">
+        </div>
+    </div>
+    <h2>Material Input</h2>
+    <mat-form-field appearance="fill">
+        <mat-label>User Name</mat-label>
+        <input ngModel #UserName="ngModel" type="text" matInput placeholder="Enter Name ">
+    </mat-form-field>
+    <h2>Hello ! {{UserName.value}}</h2>
+</div>

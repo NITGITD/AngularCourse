@@ -1,0 +1,10 @@
+nav div {
+    border:2px solid blue;
+    margin-bottom: 20px;
+    padding: 5px;
+    width: 65px;
+    height: 65px;
+}
+nav div:hover {
+    cursor: grab;
+}

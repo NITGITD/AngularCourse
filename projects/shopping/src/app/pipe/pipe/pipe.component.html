@@ -1,0 +1,41 @@
+<!-- <div class="container-fluid">
+    <h2>Your Cart</h2>
+    <table class="table table-hover">
+        <thead>
+            <th>Name</th>
+            <th>City</th>
+            <th>Delvery Status</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let product of Products">
+               <td>{{product.Name}}</td>
+               <td>{{product.ShippedTo}}</td>
+                <td>
+                  {{product.ShippedTo | i18nSelect:Status}}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div> 
+<div class="container-fluid">
+    <h2>Plural Demo</h2>
+    <div class="mb-3 input-group w-25">
+        <input type="text" [(ngModel)]="Message" class="form-control">
+        <button (click)="SendClick()" class="btn btn-primary"><span class="bi bi-send"></span></button>
+    </div>
+    <button (click)="ShowClick()" class="btn btn-primary position-relative w-25">
+        <span class="bi bi-bell">{{Messages.length | i18nPlural:NotificationMap}}</span>
+        <span class="badge bg-dark position-absolute end-0 top-0 rounded rounded-circle">{{Count}}</span>
+    </button>
+    <div class="mt-4" *ngIf="ShowMessage">
+        <ul class="list-unstyled">
+            <h3>Your Messages</h3>
+            <li *ngFor="let item of Messages">
+                {{item}}
+            </li>
+        </ul>
+
+    </div>
+
+</div>-->
+<h1>{{title|sentence`}}</h1>

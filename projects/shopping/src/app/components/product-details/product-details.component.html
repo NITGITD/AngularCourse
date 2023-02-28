@@ -1,0 +1,51 @@
+<div class="container-fluid">
+    <div class="row" mt-4>
+        <div class="col-2">
+            <div class="btn btn-group-vertical">
+                <button (click)="ViewClick('BasicDetails')" class="btn btn-primary mb-2 w-100">BasicDetails</button>
+                <button (click)="ViewClick('Preview')" class="btn btn-primary mb-2 w-100">Preview</button>
+                <button (click)="ViewClick('Offers')" class="btn btn-primary  w-100">Offers</button>
+            </div>
+            <div class="mt-4">
+                <select class="form-select" [(ngModel)]="ViewName">
+                    <option value="info">Select Info</option>
+                    <option value="BasicDetails">BasicDetails</option>
+                    <option value="Preview">Preview</option>
+                    <option value="Offers">Offers</option>
+                </select>
+
+            </div>
+        </div>
+        <div class="col-10">
+            <div [ngSwitch]="ViewName">
+                <div *ngSwitchCase="'BasicDetails'">
+                    <h4>realme C30 (Lake Blue, 32 GB)  (2 GB RAM)</h4>
+                    <span class="bg-success text-white p-2 rounded rounded-3"><span class="bi bi-star-fill text-white"></span>4.8</span>
+                    <span style="color: gray;" class="ms-4">75,240 Ratings & 4,006 Reviews</span>
+                    <div class="mt-3">
+                        <h2>₹5,999</h2>
+                    </div>
+                </div>
+                <div *ngSwitchCase="'Preview'">
+                    <img src="assets/View1.jpg" width="300" height="400">
+                </div>
+                <div *ngSwitchCase="'Offers'">
+                    <h3>Available Offers</h3>
+                    <ul class="list-unstyled">
+                        <li class="bi bi-tag-fill text-success"> Bank Offer5% Cashback on Flipkart Axis Bank CardT&C </li>
+                        <li class="bi bi-tag-fill text-success"> Special PriceGet extra ₹2500 off (price inclusive of cashback/coupon)T&C</li>
+                        <li class="bi bi-tag-fill text-success">Partner OfferSign up for Flipkart Pay Later and get Flipkart Gift Card worth up to ₹750*</li>
+                        <li class="bi bi-tag-fill text-success">Partner OfferPurchase now & get a surprise cashback coupon in February / March 2023</li>
+                    </ul>
+
+                </div>
+                <div *ngSwitchDefault>
+                    <h4>Please Select a View</h4>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+</div>

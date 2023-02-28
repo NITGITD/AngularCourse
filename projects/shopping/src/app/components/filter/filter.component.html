@@ -1,0 +1,10 @@
+<h3>Filter Products</h3>
+<ul class="list-unstyled">
+    <li class="d-flex justify-content-between mb-2"><span><input type="radio" class="form-check-input" value="all" name="category" (change)="SendCategoryName($event)"></span>All<span class="badge bg-dark">{{AllCount}}</span></li>
+    <li class="d-flex justify-content-between mb-2"><span><input type="radio" class="form-check-input" value="electronics" name="category" (change)="SendCategoryName($event)"></span>Electronics<span class="badge bg-dark">{{ElectronicsCount}}</span></li>
+    <li class="d-flex justify-content-between mb-2"><span><input type="radio" class="form-check-input" value="jewelery" name="category" (change)="SendCategoryName($event)"></span>Jewelery<span class="badge bg-dark">{{JeweleryCount}}</span></li>
+    <li class="d-flex justify-content-between mb-2"><span><input type="radio" class="form-check-input" value="men's clothing" name="category" (change)="SendCategoryName($event)"></span>Men's Clothing<span class="badge bg-dark">{{MensCount}}</span></li>
+    <li class="d-flex justify-content-between mb-2"><span><input type="radio" class="form-check-input" value="women's clothing" name="category" (change)="SendCategoryName($event)"></span>Women's Clothing<span class="badge bg-dark">{{WomensCount}}</span></li>
+    
+</ul>
+<button (click)="SendButtonClick()">Send</button>

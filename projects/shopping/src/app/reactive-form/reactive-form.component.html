@@ -1,0 +1,44 @@
+<!-- <div class="container-fluid">
+    <h2>Register User</h2>
+    <form [formGroup]="frmRegister" (submit)="SubmitClick(frmRegister.value)">
+        <dl>
+            <dt>User Name</dt>
+            <dd><input type="text" formControlName="UserName"></dd>
+            <dt>Age</dt>
+            <dd><input type="number" formControlName="Age"></dd>
+            <dt>Mobile</dt>
+            <dd><input type="text" formControlName="Mobile"></dd>
+        </dl>
+        <button>Register</button>
+    </form>
+</div> -->
+<div class="container-fluid">
+    <h2>Product Register</h2>
+    <form action="" [formGroup]="frmRegister" (submit)="RegisterClick(frmRegister.value)">
+        <dl>
+            <h3>Product Details</h3>
+            <dt>Name</dt>
+            <dd><input type="text" formControlName="Name"></dd>
+            <dt>Price</dt>
+            <dd><input type="text" formControlName="Price"></dd>
+        </dl>
+        <div class="mb-3 mt-2">
+            <h3>Upload Photos<button type="button" (click)="AddMoreClick()" class="btn btn-link">Add More</button></h3>
+            <div class="mb-3 mt-2" *ngFor="let item of Photos.controls; let i=index">
+                <input type="file" formControlName="i"><button (click)="RemoveClick(i)" class="btn btn-danger"><span class="bi bi-trash"></span></button>
+            </div>
+
+        </div>
+       <div formGroupName="frmVendor">
+            <h3>Vendor Details</h3>
+            <dl>
+            <dt>Vendor Name</dt>
+            <dd><input type="text" formControlName="VendorName"></dd>
+            <dt>Vendor Rating</dt>
+            <dd><input type="text" formControlName="VendorRating"></dd>
+        </dl>
+       </div>
+        <button>Register</button>
+        <button (click)="UpdateClick()">Update</button>
+    </form>
+</div>

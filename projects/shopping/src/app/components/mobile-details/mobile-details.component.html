@@ -1,0 +1,73 @@
+<div class="container-fluid">
+    <div class="row mt-4">
+        <div class="col-2">
+            <nav>
+                <div (mouseover)="ChangeView('View1')">
+                    <img src="assets/View1.jpg" width="50" height="50">
+                </div>
+                <div (mouseover)="ChangeView('View2')">
+                    <img src="assets/View2.jpg" width="50" height="50">
+                </div>
+                <div (mouseover)="ChangeView('View3')">
+                    <img src="assets/View3.jpg" width="50" height="50">
+                </div>
+                <div (mouseover)="ChangeView('View4')">
+                    <img src="assets/View4.jpg" width="50" height="50">
+                </div>
+                <div (mouseover)="ChangeView('View5')">
+                    <img src="assets/View5.jpg" width="50" height="50">
+                </div>
+                <div (mouseover)="ChangeView('View6')">
+                    <img src="assets/View6.jpg" width="50" height="50">
+                </div>
+            </nav>
+        </div>
+        <div class="col-4">
+            <div *ngIf="true; then ThenBlock"></div>
+            <ng-template #View1>
+                <img src="assets/View1.jpg" width="300" height="300">
+            </ng-template>
+            <ng-template #View2>
+                <img src="assets/View2.jpg" width="300" height="300">
+            </ng-template>
+            <ng-template #View3>
+                <img src="assets/View3.jpg" width="300" height="300">
+            </ng-template>
+            <ng-template #View4>
+                <img src="assets/View4.jpg" width="300" height="300">
+            </ng-template>
+            <ng-template #View5>
+                <img src="assets/View5.jpg" width="300" height="300">
+            </ng-template>
+            <ng-template #View6>
+                <img src="assets/View6.jpg" width="300" height="300">
+            </ng-template>
+
+        </div>
+        <div class="col-6">
+            <div>
+                <h3>realme C30 (Lake Blue, 32 GB)  (2 GB RAM)</h3>
+            </div>
+            <div>
+                <span class="bg-success text-white p-1 rounded rounded-3"><span class="bi bi-star-fill text-white"></span> 4.3 </span> <span class="ms-4">74,857 Ratings & 3,981 Reviews</span>
+            </div>
+            <div class="mt-3">
+                <span class="text-success"><b>Extra ₹2750 off</b></span>
+            </div>
+            <div class="mt-2">
+                <h3>₹5,749 </h3> <span><del>₹8,499</del></span> <b><span class="ms-3">32% Off</span></b>
+            </div>
+            <div class="mt-3">
+                <ul class="list-unstyled">
+                    <li> <span class="bi bi-tag-fill text-success"></span> Bank Offer5% Cashback on Flipkart Axis Bank CardT&C </li>
+                    <li> <span class="bi bi-tag-fill text-success"></span> Special PriceGet extra ₹2500 off (price inclusive of cashback/coupon)T&C </li>
+                    <li> <span class="bi bi-tag-fill text-success"></span> Partner OfferSign up for Flipkart Pay Later and get Flipkart Gift Card worth up to ₹750*Know More </li>
+                    <li> <span class="bi bi-tag-fill text-success"></span> Partner OfferPurchase now & get a surprise cashback coupon in February / March 2023Know More</li>
+                    <li> <span class="bi bi-tag-fill text-success"></span> Bank Offer5% Cashback on Flipkart Axis Bank CardT&C </li>
+                </ul>
+            </div>
+        </div>
+
+
+    </div>
+</div>
